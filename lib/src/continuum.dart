@@ -1,3 +1,5 @@
+import 'thing.dart';
+
 /// The whole set of all information.
 /// 
 /// The information continuum represents a collection of information objects,
@@ -6,6 +8,8 @@
 /// a specific [Thing], and storing new information as a [Thing].
 class Continuum {
 
-  const Continuum();
+  final List<Thing> things;
+
+  const Continuum({this.things = const []});
 
 }
