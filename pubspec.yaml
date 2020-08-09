@@ -1,0 +1,14 @@
+name: rhizome
+description: A Dart implementation of the Rhizome API, for a new information-centric operating system for humans.
+version: 0.0.1
+homepage: https://github.com/ybakos/rhizome-dart
+
+environment:
+  sdk: '>=2.8.1 <3.0.0'
+
+dependencies:
+  # TODO
+
+dev_dependencies:
+  pedantic: ^1.9.0
+  test: ^1.14.4
