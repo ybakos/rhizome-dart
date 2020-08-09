@@ -3,14 +3,14 @@ import 'package:test/test.dart';
 
 void main() {
   group('A group of tests', () {
-    Awesome awesome;
+    Rhizome rhizome;
 
     setUp(() {
-      awesome = Awesome();
+      rhizome = Rhizome();
     });
 
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+    test('The rhizome exists', () {
+      // no op
     });
   });
 }
