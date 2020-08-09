@@ -1,0 +1,11 @@
+language: dart
+
+dart:
+- 2.9.0
+
+branches:
+  only: [master]
+
+cache:
+ directories:
+   - $HOME/.pub-cache
