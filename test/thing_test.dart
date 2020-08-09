@@ -24,5 +24,15 @@ void main() {
       expect(thing.targets.isEmpty, isTrue);
     });
 
+    test('#isTaggedBy', () {
+      final tag = Thing(information: 'Fake', uri: Uri());
+      expect(thing.isTaggedBy(tag), isFalse);
+    });
+
+    test('#isTagging', () {
+      final target = Thing(information: 'Fake', uri: Uri());
+      expect(thing.isTagging(target), isFalse);
+    });
+
   });
 }

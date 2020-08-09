@@ -34,4 +34,7 @@ class Thing {
         _tags = tags,
         _targets = targets;
 
+  bool isTaggedBy(Thing tag) => tags.contains(tag.uri);
+  bool isTagging(Thing target) => targets.contains(target.uri);
+
 }
