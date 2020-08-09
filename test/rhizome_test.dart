@@ -1,5 +1,5 @@
-import 'package:rhizome/rhizome.dart';
 import 'package:test/test.dart';
+import 'package:rhizome/rhizome.dart';
 
 void main() {
   group('A group of tests', () {
