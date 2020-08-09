@@ -3,14 +3,26 @@ import 'package:rhizome/rhizome.dart';
 
 void main() {
   group('A group of tests', () {
+    String fakeInformation = 'Fake';
+    Uri fakeUri = Uri();
     Thing thing;
 
     setUp(() {
-      thing = Thing();
+      thing = Thing(information: fakeInformation, uri: fakeUri);
     });
 
-    test('A Thing exists', () {
-      // no op
+    test('A Thing has information and a uri', () {
+      expect(thing.information, equals(fakeInformation));
+      expect(thing.uri, equals(fakeUri));
     });
+
+    test('A new Thing has no tags', () {
+      expect(thing.tags.isEmpty, isTrue);
+    });
+
+    test('A new Thing has no targets', () {
+      expect(thing.targets.isEmpty, isTrue);
+    });
+
   });
 }
