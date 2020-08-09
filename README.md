@@ -1,5 +1,7 @@
 # Rhizome
 
+[![Build Status](https://travis-ci.org/ybakos/rhizome-dart.svg?branch=master)](https://travis-ci.org/ybakos/rhizome-dart)
+
 A Dart implementation of the Rhizome API, for a new information-centric operating system for humans.
 
 ## Introduction
