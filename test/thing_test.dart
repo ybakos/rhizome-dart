@@ -3,8 +3,8 @@ import 'package:rhizome/rhizome.dart';
 
 void main() {
   group('A Thing', () {
-    String fakeInformation = 'Fake';
-    Uri fakeUri = Uri();
+    final fakeInformation = 'Fake';
+    final fakeUri = Uri();
     Thing thing;
 
     setUp(() {
@@ -48,6 +48,7 @@ void main() {
     test('#tag adds tag uri to tags and targets reciprocally', () {
       final target = Thing(information: 'Fake', uri: Uri());
       thing.tag(target);
+
       expect(thing.targets.contains(target.uri), isTrue);
       expect(target.tags.contains(thing.uri), isTrue);
     });
