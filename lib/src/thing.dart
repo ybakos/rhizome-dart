@@ -24,17 +24,40 @@ class Thing {
   /// [Thing].
   List<Uri> get targets => _targets;
 
-  const Thing(
+  Thing(
       {@required information,
       @required Uri uri,
-      List<Uri> tags = const <Uri>[],
-      List<Uri> targets = const <Uri>[]})
+      List<Uri> tags,
+      List<Uri> targets})
       : _information = information,
         _uri = uri,
-        _tags = tags,
-        _targets = targets;
+        _tags = tags ?? <Uri>[],
+        _targets = targets ?? <Uri>[];
 
+  /// `true` when this [Thing] is tagged by `tag`.
   bool isTaggedBy(Thing tag) => tags.contains(tag.uri);
+  /// `true` when `target` is tagged with this [Thing].
   bool isTagging(Thing target) => targets.contains(target.uri);
+
+  /// Tag this [Thing] with `tag`.
+  ///
+  /// Tagging is reciprocal, in that if Thing A is tagged with Thing B, then
+  /// Thing A is informed it has been tagged with B, and B is informed that it
+  /// tags A.
+  void tagWith(Thing tag) {
+    if (isTaggedBy(tag)) return;
+    tags.add(tag.uri);
+    tag.tag(this);
+  }
+
+  /// Tag `target` with this [Thing].
+  ///
+  /// Tagging is reciprocal, in that if Thing A tags Thing B, then A is informed
+  /// that it tags B, and B is informed that it has been tagged with A.
+  void tag(Thing target) {
+    if (isTagging(target)) return;
+    targets.add(target.uri);
+    target.tagWith(this);
+  }
 
 }
