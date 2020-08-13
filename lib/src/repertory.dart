@@ -16,4 +16,9 @@ class Repertory {
     return _index[information];
   }
   
+  void register(Thing thing) {
+    if (_index.containsKey(thing.information)) return;
+    _index[thing.information] = thing.uri;
+  }
+  
 }
