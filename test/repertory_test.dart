@@ -18,5 +18,16 @@ void main() {
       expect(Repertory().index.isEmpty, isTrue);
     });
 
+    test('#seek returns the Uri of a Thing for existing information', () {
+      final information = 'Fake';
+      final uri = Uri();
+      repertory = Repertory(index: {information: uri});
+      expect(repertory.seek(information), equals(uri));
+    });
+
+    test('#seek returns null when the information does not exist', () {
+      expect(repertory.seek('Does not exist'), isNull);
+    });
+
   });
 }

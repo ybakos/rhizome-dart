@@ -12,4 +12,8 @@ class Repertory {
 
   Repertory({index}) : _index = index ?? <dynamic, Uri>{};
 
+  Uri seek(dynamic information) {
+    return _index[information];
+  }
+  
 }
