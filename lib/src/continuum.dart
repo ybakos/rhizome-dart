@@ -8,9 +8,10 @@ import 'thing.dart';
 /// a specific [Thing], and storing new information as a [Thing].
 class Continuum {
 
-  final List<Thing> _things;
-  List<Thing> get things => _things;
+  final Map<Uri, Thing> _things;
+  /// A key-value store mapping URIs to [Thing]s.
+  Map<Uri, Thing> get things => _things;
 
-  Continuum({List<Thing> things}) : _things = things ?? <Thing>[];
+  Continuum({Map<Uri, Thing> things}) : _things = things ?? <Uri, Thing>{};
 
 }

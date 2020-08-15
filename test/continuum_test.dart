@@ -4,7 +4,7 @@ import 'package:rhizome/rhizome.dart';
 void main() {
   group('A Continuum', () {
     Continuum continuum;
-    final fakeThings = <Thing>[];
+    final fakeThings = <Uri, Thing>{};
 
     setUp(() {
       continuum = Continuum(things: fakeThings);
