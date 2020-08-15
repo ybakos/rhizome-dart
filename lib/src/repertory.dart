@@ -11,7 +11,7 @@ class Repertory {
   /// A key-value store mapping information to URIs of [Thing]s.
   Map<dynamic, Uri> get index => _index;
 
-  Repertory({index}) : _index = index ?? <dynamic, Uri>{};
+  Repertory({Map<dynamic, Uri> index}) : _index = index ?? <dynamic, Uri>{};
 
   /// Retrieve the Uri of a [Thing] that represents `information`.
   Uri seek(dynamic information) {
