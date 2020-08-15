@@ -28,5 +28,11 @@ void main() {
     test('#retrieve returns null when the URI does not exist', () {
       expect(continuum.retrieve(Uri()), isNull);
     });
+
+    test('#store stores and returns a new thing with a URI', () {
+      final information = 'Fake information';
+      final newThing = continuum.store(information);
+      expect(continuum.things[newThing.uri].information, equals(information));
+    });
   });
 }

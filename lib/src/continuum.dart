@@ -18,4 +18,10 @@ class Continuum {
     return things[uri];
   }
 
+  Thing store(dynamic information) {
+    final thing = Thing(information: information, uri: Uri());
+    things[thing.uri] = thing;
+    return thing;
+  }
+
 }
