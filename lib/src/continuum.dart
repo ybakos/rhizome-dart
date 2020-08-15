@@ -9,6 +9,7 @@ import 'thing.dart';
 class Continuum {
 
   final List<Thing> _things;
+  List<Thing> get things => _things;
 
   Continuum({List<Thing> things}) : _things = things ?? <Thing>[];
 
