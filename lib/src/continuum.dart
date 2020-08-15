@@ -14,4 +14,8 @@ class Continuum {
 
   Continuum({Map<Uri, Thing> things}) : _things = things ?? <Uri, Thing>{};
 
+  Thing retrieve(uri) {
+    return things[uri];
+  }
+
 }
