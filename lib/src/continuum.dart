@@ -8,8 +8,8 @@ import 'thing.dart';
 /// a specific [Thing], and storing new information as a [Thing].
 class Continuum {
 
-  final List<Thing> things;
+  final List<Thing> _things;
 
-  Continuum({List<Thing> things}) : this.things = things ?? <Thing>[];
+  Continuum({List<Thing> things}) : _things = things ?? <Thing>[];
 
 }
