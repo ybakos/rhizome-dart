@@ -7,11 +7,11 @@ import 'repertory.dart';
 /// retrieving a specific information object (a [Thing]), and seeking
 /// information.
 class Rhizome {
-  final Continuum continuum;
-  final Repertory repertory;
+  final Continuum _continuum;
+  final Repertory _repertory;
 
   Rhizome(
       {Continuum continuum, Repertory repertory})
-      : this.continuum = continuum ?? Continuum(),
-        this.repertory = repertory ?? Repertory();
+      : _continuum = continuum ?? Continuum(),
+        _repertory = repertory ?? Repertory();
 }
