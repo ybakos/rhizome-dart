@@ -2,15 +2,20 @@ import 'package:test/test.dart';
 import 'package:rhizome/rhizome.dart';
 
 void main() {
-  group('A group of tests', () {
+  group('A Continuum', () {
     Continuum continuum;
+    final fakeThings = <Thing>[];
 
     setUp(() {
-      continuum = Continuum();
+      continuum = Continuum(things: fakeThings);
     });
 
-    test('The continuum exists', () {
-      // no op
+    test('has things', () {
+      expect(continuum.things, equals(fakeThings));
+    });
+
+    test('has an empty initial list of things by default', () {
+      expect(Continuum().things.isEmpty, isTrue);
     });
   });
 }
