@@ -11,5 +11,7 @@ class Rhizome {
   final Repertory repertory;
 
   Rhizome(
-      {this.continuum = const Continuum(), repertory}) : this.repertory = repertory ?? Repertory();
+      {Continuum continuum, Repertory repertory})
+      : this.continuum = continuum ?? Continuum(),
+        this.repertory = repertory ?? Repertory();
 }

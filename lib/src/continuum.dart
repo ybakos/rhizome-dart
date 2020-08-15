@@ -10,6 +10,6 @@ class Continuum {
 
   final List<Thing> things;
 
-  const Continuum({this.things = const []});
+  Continuum({List<Thing> things}) : this.things = things ?? <Thing>[];
 
 }
