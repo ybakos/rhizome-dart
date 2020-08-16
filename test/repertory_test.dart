@@ -4,14 +4,14 @@ import 'package:rhizome/rhizome.dart';
 void main() {
   group('A Repertory', () {
     Repertory repertory;
-    final fakeIndex = <dynamic, Uri>{};
+    final index = <dynamic, Uri>{};
 
     setUp(() {
-      repertory = Repertory(index: fakeIndex);
+      repertory = Repertory(index: index);
     });
 
     test('has an index', () {
-      expect(repertory.index, equals(fakeIndex));
+      expect(repertory.index, equals(index));
     });
 
     test('has an empty initial index by default', () {
@@ -30,23 +30,23 @@ void main() {
     });
 
     test('#register does nothing when the Thing is already indexed', () {
-      final fakeInformation = 'Fake';
-      final fakeUri = Uri();
-      final fakeThing = Thing(information: fakeInformation, uri: fakeUri);
-      final repertory = Repertory(index: {fakeThing.information: fakeThing.uri});
+      final information = 'Fake';
+      final uri = Uri();
+      final thing = Thing(information: information, uri: uri);
+      final repertory = Repertory(index: {thing.information: thing.uri});
       expect(repertory.index.length, equals(1));
-      repertory.register(fakeThing);
+      repertory.register(thing);
       expect(repertory.index.length, equals(1));
     });
 
     test('#register a Thing adds it to the index', () {
-      final fakeInformation = 'Fake';
-      final fakeUri = Uri();
-      final fakeThing = Thing(information: fakeInformation, uri: fakeUri);
+      final information = 'Fake';
+      final uri = Uri();
+      final thing = Thing(information: information, uri: uri);
       final repertory = Repertory(index: <dynamic, Uri>{});
-      repertory.register(fakeThing);
-      expect(repertory.index.containsKey(fakeInformation), isTrue);
-      expect(repertory.index[fakeInformation], equals(fakeUri));
+      repertory.register(thing);
+      expect(repertory.index.containsKey(information), isTrue);
+      expect(repertory.index[information], equals(uri));
     });
 
   });

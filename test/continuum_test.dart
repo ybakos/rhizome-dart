@@ -20,7 +20,7 @@ void main() {
 
     test('#retrieve returns a Thing associated with the provided URI', () {
       final uri = Uri();
-      final thing = Thing(information: 'Fake');
+      final thing = Thing(information: 'Fake', uri: uri);
       final continuum = Continuum(things: {uri: thing});
       expect(continuum.retrieve(uri), equals(thing));
     });

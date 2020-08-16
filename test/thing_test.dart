@@ -3,17 +3,17 @@ import 'package:rhizome/rhizome.dart';
 
 void main() {
   group('A Thing', () {
-    final fakeInformation = 'Fake';
-    final fakeUri = Uri();
+    final information = 'Fake';
+    final uri = Uri();
     Thing thing;
 
     setUp(() {
-      thing = Thing(information: fakeInformation, uri: fakeUri);
+      thing = Thing(information: information, uri: uri);
     });
 
     test('has information and a uri', () {
-      expect(thing.information, equals(fakeInformation));
-      expect(thing.uri, equals(fakeUri));
+      expect(thing.information, equals(information));
+      expect(thing.uri, equals(uri));
     });
 
     test('has no initial tags', () {
@@ -48,7 +48,6 @@ void main() {
     test('#tag adds tag uri to tags and targets reciprocally', () {
       final target = Thing(information: 'Fake', uri: Uri());
       thing.tag(target);
-
       expect(thing.targets.contains(target.uri), isTrue);
       expect(target.tags.contains(thing.uri), isTrue);
     });
