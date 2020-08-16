@@ -14,10 +14,12 @@ class Continuum {
 
   Continuum({Map<Uri, Thing> things}) : _things = things ?? <Uri, Thing>{};
 
+  /// Retrive the [Thing] identified by `uri`.
   Thing retrieve(uri) {
     return things[uri];
   }
 
+  /// Transform `information` into a [Thing] with a URI.
   Thing store(dynamic information) {
     final thing = Thing(information: information, uri: Uri());
     things[thing.uri] = thing;
