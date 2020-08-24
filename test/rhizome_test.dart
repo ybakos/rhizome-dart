@@ -41,6 +41,12 @@ void main() {
     test('#seek returns null when the information does not exist', () {
       expect(rhizome.seek('Fake'), isNull);
     });
-    
+
+    test('#store returns a new Thing with a new URI, given new information', () {
+      final information = 'Fake';
+      final newThing = rhizome.store(information);
+      expect(newThing.information, equals(information));
+    });
+
   });
 }
