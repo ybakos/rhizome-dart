@@ -37,5 +37,10 @@ void main() {
       );
       expect(rhizome.seek(information), equals(thing));
     });
+
+    test('#seek returns null when the information does not exist', () {
+      expect(rhizome.seek('Fake'), isNull);
+    });
+    
   });
 }
