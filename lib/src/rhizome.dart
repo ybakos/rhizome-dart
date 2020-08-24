@@ -16,8 +16,6 @@ class Rhizome {
       : _continuum = continuum ?? Continuum(),
         _repertory = repertory ?? Repertory();
   
-  Thing retrieve(uri) {
-    return _continuum.retrieve(uri);
-  }
+  Thing retrieve(uri) => _continuum.retrieve(uri);
   
 }
