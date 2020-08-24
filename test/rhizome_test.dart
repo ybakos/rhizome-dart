@@ -26,5 +26,16 @@ void main() {
       final uri = Uri();
       expect(rhizome.retrieve(uri), isNull);
     });
+
+    test('#seek returns a Thing given its information', () {
+      final information = 'Fake';
+      final uri = Uri();
+      final thing = Thing(information: information, uri: uri);
+      final rhizome = Rhizome(
+        continuum: Continuum(things: {uri: thing}),
+        repertory: Repertory(index: {information: uri})
+      );
+      expect(rhizome.seek(information), equals(thing));
+    });
   });
 }
