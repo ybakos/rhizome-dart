@@ -36,6 +36,7 @@ class Thing {
 
   /// `true` when this [Thing] is tagged by `tag`.
   bool isTaggedBy(Thing tag) => tags.contains(tag.uri);
+
   /// `true` when `target` is tagged with this [Thing].
   bool isTagging(Thing target) => targets.contains(target.uri);
 
