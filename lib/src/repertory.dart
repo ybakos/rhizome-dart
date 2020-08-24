@@ -13,10 +13,8 @@ class Repertory {
 
   Repertory({Map<dynamic, Uri> index}) : _index = index ?? <dynamic, Uri>{};
 
-  /// Retrieve the Uri of a [Thing] that represents `information`.
-  Uri seek(dynamic information) {
-    return _index[information];
-  }
+  /// Retrieve the URI of a [Thing] that represents `information`.
+  Uri seek(dynamic information) => _index[information];
   
   /// Add a [Thing] to the repertory.
   void register(Thing thing) {
