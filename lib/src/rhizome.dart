@@ -1,5 +1,6 @@
 import 'continuum.dart';
 import 'repertory.dart';
+import 'thing.dart';
 
 /// A living distribution of all the world's information.
 ///
@@ -14,4 +15,9 @@ class Rhizome {
       {Continuum continuum, Repertory repertory})
       : _continuum = continuum ?? Continuum(),
         _repertory = repertory ?? Repertory();
+  
+  Thing retrieve(uri) {
+    return _continuum.retrieve(uri);
+  }
+  
 }
