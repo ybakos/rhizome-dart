@@ -9,10 +9,6 @@ void main() {
       rhizome = Rhizome();
     });
 
-    test('The rhizome exists', () {
-      // no op
-    });
-
     test('#retrieve returns a Thing given its URI', () {
       final uri = Uri();
       final thing = Thing(information: 'Fake', uri: uri);
@@ -56,7 +52,7 @@ void main() {
         continuum: Continuum(things: {uri: thing}),
         repertory: Repertory(index: {information: uri})
       );
-      expect(rhizome.seek(information), equals(thing));
+      expect(rhizome.store(information), equals(thing));
     });
 
   });
