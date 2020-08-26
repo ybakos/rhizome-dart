@@ -22,10 +22,14 @@ class Rhizome {
   /// Retrieve the [Thing] that represents `information`.
   Thing seek(dynamic information) => retrieve(_repertory.seek(information));
 
+  /// Store `information` in the Rhizome, and return the [Thing] that represents
+  /// this information. If the `information` already exists, return the existing
+  /// [Thing].
   Thing store(dynamic information) {
     if (seek(information) != null) return seek(information);
     final thing = _continuum.store(information);
     _repertory.register(thing);
     return thing;
   }
+  
 }
