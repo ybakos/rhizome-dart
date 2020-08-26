@@ -11,14 +11,13 @@ class Rhizome {
   final Continuum _continuum;
   final Repertory _repertory;
 
-  Rhizome(
-      {Continuum continuum, Repertory repertory})
+  Rhizome({Continuum continuum, Repertory repertory})
       : _continuum = continuum ?? Continuum(),
         _repertory = repertory ?? Repertory();
-  
+
   /// Retrieve the [Thing] indentified by `uri`.
   Thing retrieve(uri) => _continuum.retrieve(uri);
-  
+
   /// Retrieve the [Thing] that represents `information`.
   Thing seek(dynamic information) => retrieve(_repertory.seek(information));
 
@@ -31,5 +30,4 @@ class Rhizome {
     _repertory.register(thing);
     return thing;
   }
-  
 }

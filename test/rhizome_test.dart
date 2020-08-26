@@ -12,9 +12,7 @@ void main() {
     test('#retrieve returns a Thing given its URI', () {
       final uri = Uri();
       final thing = Thing(information: 'Fake', uri: uri);
-      final rhizome = Rhizome(
-        continuum: Continuum(things: {uri: thing})
-      );
+      final rhizome = Rhizome(continuum: Continuum(things: {uri: thing}));
       expect(rhizome.retrieve(uri), equals(thing));
     });
 
@@ -28,9 +26,8 @@ void main() {
       final uri = Uri();
       final thing = Thing(information: information, uri: uri);
       final rhizome = Rhizome(
-        continuum: Continuum(things: {uri: thing}),
-        repertory: Repertory(index: {information: uri})
-      );
+          continuum: Continuum(things: {uri: thing}),
+          repertory: Repertory(index: {information: uri}));
       expect(rhizome.seek(information), equals(thing));
     });
 
@@ -50,11 +47,9 @@ void main() {
       final uri = Uri();
       final thing = Thing(information: information, uri: uri);
       final rhizome = Rhizome(
-        continuum: Continuum(things: {uri: thing}),
-        repertory: Repertory(index: {information: uri})
-      );
+          continuum: Continuum(things: {uri: thing}),
+          repertory: Repertory(index: {information: uri}));
       expect(rhizome.store(information), equals(thing));
     });
-
   });
 }

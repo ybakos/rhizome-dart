@@ -51,6 +51,5 @@ void main() {
       expect(thing.targets.contains(target.uri), isTrue);
       expect(target.tags.contains(thing.uri), isTrue);
     });
-
   });
 }

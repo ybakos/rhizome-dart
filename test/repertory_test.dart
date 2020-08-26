@@ -48,6 +48,5 @@ void main() {
       expect(repertory.index.containsKey(information), isTrue);
       expect(repertory.index[information], equals(uri));
     });
-
   });
 }

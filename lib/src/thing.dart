@@ -5,21 +5,24 @@ import 'package:meta/meta.dart';
 /// A Thing elevates a piece of raw information into an object, in the sense of
 /// "information as thing" (Buckland, 1991).
 class Thing {
-
   final _information;
+
   /// The raw information itself. For example, [Rhizome] represents a photograph
-  /// as a [Thing] whose information is the photograph itself. 
+  /// as a [Thing] whose information is the photograph itself.
   dynamic get information => _information;
 
   final Uri _uri;
+
   /// A permanentily unique identifier.
   Uri get uri => _uri;
 
   final List<Uri> _tags;
+
   /// A list of the URIs of other [Thing]s that this [Thing] is tagged with.
   List<Uri> get tags => _tags;
 
   final List<Uri> _targets;
+
   /// A list of the URIs of other [Thing]s that have been tagged with this
   /// [Thing].
   List<Uri> get targets => _targets;
@@ -60,5 +63,4 @@ class Thing {
     targets.add(target.uri);
     target.tagWith(this);
   }
-
 }
