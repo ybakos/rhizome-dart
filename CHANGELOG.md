@@ -9,3 +9,7 @@
 ## 0.0.2-dev.2
 
 - Complete fundamental API
+
+## 0.0.2-dev.3
+
+- Massage format per dartfmt
