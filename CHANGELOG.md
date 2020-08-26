@@ -5,3 +5,7 @@
 ## 0.0.2-dev.1
 
 - Introduce basic API types
+
+## 0.0.2-dev.2
+
+- Complete fundamental API
