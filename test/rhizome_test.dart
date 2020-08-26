@@ -48,5 +48,16 @@ void main() {
       expect(newThing.information, equals(information));
     });
 
+    test('#store returns an existing Thing, given existing information', () {
+      final information = 'Fake';
+      final uri = Uri();
+      final thing = Thing(information: information, uri: uri);
+      final rhizome = Rhizome(
+        continuum: Continuum(things: {uri: thing}),
+        repertory: Repertory(index: {information: uri})
+      );
+      expect(rhizome.seek(information), equals(thing));
+    });
+
   });
 }
