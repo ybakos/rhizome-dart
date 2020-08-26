@@ -42,6 +42,7 @@ void main() {
       final information = 'Fake';
       final newThing = rhizome.store(information);
       expect(newThing.information, equals(information));
+      expect(newThing.uri, isNotNull);
     });
 
     test('#store returns an existing Thing, given existing information', () {
