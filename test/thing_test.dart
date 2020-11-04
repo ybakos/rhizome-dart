@@ -24,6 +24,10 @@ void main() {
       expect(thing.targets.isEmpty, isTrue);
     });
 
+    test('has a string representation', () {
+      expect(thing.toString(), matches('Fake'));
+    });
+
     test('#isTaggedBy', () {
       final tag = Thing(information: 'Fake', uri: Uri());
       expect(thing.isTaggedBy(tag), isFalse);

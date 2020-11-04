@@ -63,4 +63,10 @@ class Thing {
     targets.add(target.uri);
     target.tagWith(this);
   }
+
+  @override
+  String toString() =>
+    '${information}\t(${uri})\n'
+    'Tags:    ${tags}\n'
+    'Targets: ${targets}';
 }
