@@ -30,4 +30,11 @@ class Rhizome {
     _repertory.register(thing);
     return thing;
   }
+
+  /// WIP: Retrieve a list of [Thing]s meeting provided criteria.
+  /// WIP: Right now, omit the criteria and just return everything.
+  List<Thing> query() {
+    return _continuum.things.values.toList();
+  }
+ 
 }

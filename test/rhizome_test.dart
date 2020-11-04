@@ -51,5 +51,17 @@ void main() {
           repertory: Repertory(index: {information: uri}));
       expect(rhizome.store(information), equals(thing));
     });
+
+    test('WIP: #query of an empty Rhizome returns an empty list', () {
+      expect(rhizome.query().length, equals(0));
+    });
+
+    test('WIP: #query returns a list of every Thing', () {
+      final first = rhizome.store('Fake 1');
+      final second = rhizome.store('Fake 2');
+      expect(rhizome.query().length, equals(2));
+      expect(rhizome.query().contains(first), isTrue);
+      expect(rhizome.query().contains(second), isTrue);
+    });
   });
 }
