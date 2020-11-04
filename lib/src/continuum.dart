@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'thing.dart';
 
 /// The whole set of all information.
@@ -19,7 +20,10 @@ class Continuum {
 
   /// Transform `information` into a [Thing] with a URI.
   Thing store(dynamic information) {
-    final thing = Thing(information: information, uri: Uri());
+    final thing = Thing(
+      information: information,
+      uri: Uri.dataFromBytes(utf8.encode(information))
+    );
     things[thing.uri] = thing;
     return thing;
   }
