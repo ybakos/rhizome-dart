@@ -20,3 +20,6 @@
 - Thing: produce String representation
 - Continuum: generate distinct URIs
 
+## 0.0.2-dev.5
+
+- Update changelog. No changes since 0.0.2-dev.4.
