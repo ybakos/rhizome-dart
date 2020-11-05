@@ -13,3 +13,10 @@
 ## 0.0.2-dev.3
 
 - Massage format per dartfmt
+
+## 0.0.2-dev.4
+
+- Rhizome: add simple query method
+- Thing: produce String representation
+- Continuum: generate distinct URIs
+
