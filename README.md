@@ -14,6 +14,10 @@ A Dart implementation of the Rhizome API, for a new information-centric operatin
 
 Add `rhizome` to your _pubspec.yaml_.
 
+## Usage
+
+TODO
+
 ## Example
 
 See _example/example.dart_.
