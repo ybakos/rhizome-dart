@@ -34,5 +34,11 @@ void main() {
       final newThing = continuum.store(information);
       expect(continuum.things[newThing.uri].information, equals(information));
     });
+
+    test('#store works with different kinds of information', () {
+      final information = 42;
+      final newThing = continuum.store(information);
+      expect(continuum.things[newThing.uri].information, equals(information));
+    });
   });
 }

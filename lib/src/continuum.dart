@@ -8,6 +8,7 @@ import 'thing.dart';
 /// instance, it provides and API for obtaining a list of [Thing]s, retrieving
 /// a specific [Thing], and storing new information as a [Thing].
 class Continuum {
+  static int nextUriId = 0;
   final Map<Uri, Thing> _things;
 
   /// A key-value store mapping URIs to [Thing]s.
@@ -21,9 +22,8 @@ class Continuum {
   /// Transform `information` into a [Thing] with a URI.
   Thing store(dynamic information) {
     final thing = Thing(
-      information: information,
-      uri: Uri.dataFromBytes(utf8.encode(information))
-    );
+        information: information,
+        uri: Uri.dataFromBytes(utf8.encode('${nextUriId++}')));
     things[thing.uri] = thing;
     return thing;
   }
