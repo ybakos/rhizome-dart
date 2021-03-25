@@ -2,7 +2,7 @@ import 'package:test/test.dart';
 import 'package:rhizome/rhizome.dart';
 
 void main() {
-  group('A group of tests', () {
+  group('A Rhizome', () {
     Rhizome rhizome;
 
     setUp(() {
