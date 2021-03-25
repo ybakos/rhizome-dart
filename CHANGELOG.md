@@ -23,3 +23,7 @@
 ## 0.0.2-dev.5
 
 - Update changelog. No changes since 0.0.2-dev.4.
+
+## 0.0.2-dev.5
+
+- Continuum: use internal integer ids to generate unique URIs
